@@ -35,7 +35,7 @@ def classify_image(image):
 
 def send_command_to_arduino():
     # Send command to Arduino (e.g., 'd' for detect)
-    ser.write(b'd')
+    ser.write(bytearray(1))
 
 def gen_frames():
     camera = cv2.VideoCapture(0)
